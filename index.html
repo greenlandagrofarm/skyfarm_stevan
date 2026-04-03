@@ -3,14 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>FARMBOARD ULTRA - Greenland</title>
+    <title>ULTRABOARD - SKY FARM</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; background-color: #2D9596; }
-        iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            /* Background layar diubah menjadi putih */
+            background-color: #ffffff;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            z-index: 1;
+        }
+        /* Loader dengan teks Hijau Tosca */
+        #loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* Warna Hijau Tosca */
+            color: #008080;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            font-weight: bold;
+            z-index: 2;
+        }
     </style>
 </head>
 <body>
-    <!-- GANTI URL DI BAWAH DENGAN LINK WEB APP PEMBELI -->
-    <iframe src="https://script.google.com/macros/s/AKfycbyknc6l8rrm2N2cwQU3ojI6WNatRRa4g5UR33N-SdFr2fsQTqXY_x7L326iLaSjbc8/exec"></iframe>
+    <div id="loader">Memuat Aplikasi Mohon Tunggu...</div>
+    
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbydlgEORYjPjFgV-Zrjb1CUZE5Rxl-JoZC48fMTeTAUPDZKjC462byCB48gZ_3X0Tur/exec" 
+        onload="document.getElementById('loader').style.display='none';">
+    </iframe>
 </body>
 </html>
